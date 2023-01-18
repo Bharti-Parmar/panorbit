@@ -1,9 +1,12 @@
+import { AccountCard } from './components/multicellulars/Cards/Card';
 import './App.css';
+import bgImage from './assests/Images/background.svg';
 
 function App() {
   return (
     <div className="App">
-      <h1>Bharti P Raghav</h1>
+      <img src={bgImage} alt="bgimage" />
+      <AccountCard />
     </div>
   );
 }
