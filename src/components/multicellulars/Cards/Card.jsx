@@ -1,27 +1,52 @@
 import React from "react";
+import ListGroup from "react-bootstrap/ListGroup";
+import Card from "react-bootstrap/Card";
+import "./card.css";
 
-function Card() {
+const AccountCard = () => {
   return (
-    <div>
-      <div class="card text-center">
-        <div class="card-header">
-          <h3 class="card-title">CardHeader</h3>
-        </div>
-        <div
-          class="card-body d-flex align-items-center justify-content-center"
-          style={{ height: "300px" }}
+    <React.Fragment>
+      <Card>
+        <Card.Header className="px-5 py-4 font-weight-bold">
+          Select an account
+        </Card.Header>
+        <ListGroup
+          variant="flush"
+          className="overflow-auto flex align-items-start"
         >
-          <div class="">
-            <h4>A text above the button</h4>
-            <button class="btn btn-primary mt-2 text-center">
-              <i class="fa fa-plus mr-1" />
-              <span>Add Button</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+          <ListGroup.Item>
+            <div className="float-left">
+              <img
+                src="cinqueterre.jpg"
+                className="rounded-circle mr-2"
+                alt=""
+              />
+              <span>Cras justo odio</span>
+            </div>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <span className="float-left">Cras justo odio</span>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <span className="float-left">Cras justo odio</span>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <span className="float-left">Cras justo odio</span>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <span className="float-left">Cras justo odio</span>
+          </ListGroup.Item>
+          {/* <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+          <ListGroup.Item>Cras justo odio</ListGroup.Item>
+          <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+          <ListGroup.Item>Vestibulum at eros</ListGroup.Item> */}
+        </ListGroup>
+      </Card>
+    </React.Fragment>
   );
-}
+};
 
-export default Card;
+export default AccountCard;
